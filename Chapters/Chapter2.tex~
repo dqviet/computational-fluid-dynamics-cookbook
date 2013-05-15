@@ -1,0 +1,306 @@
+% Chapter Template
+
+\chapter{Physical phenomena of fluid dynamics} % Main chapter title
+
+\label{ChapterX} % Change X to a consecutive number; for referencing this chapter elsewhere, use \ref{ChapterX}
+
+\lhead{Chapter X. \emph{Physical fluid dynamics}} % Change X to a consecutive number; this is for the header on each page - perhaps a shortened title
+
+%----------------------------------------------------------------------------------------
+%	SECTION 1
+%----------------------------------------------------------------------------------------
+
+\section {Physical introduction}
+
+In this chapter the physical basics of fluid dynamics shall be introduced and explained. Since the focus of this Chapter is to give the novice reader a good understanding  of the underlying physical and mathematical terms of CFD, at first specific physical phenomenon of fluids are presented and illustrated in detail before slowly moving to the realms of mathematics in this Chapter and in Chapter X to further describe these phenomena. We start with the explanation of several important terms of the field and then continue with the governing equations of fluid dynamics by explaining them with the simpler Euler equations. Afterwards the Navier-Stokes equations are presented as an extension of the Euler equations.
+In Chapter X the given equations are explained in more detail from the mathematical and numerical view.
+
+
+
+\section{Fluid dynamics terminology}
+
+Grown over many years...for further reading Potter (2009 \citep{Potter2009}) is recommended.
+
+
+Nunc posuere quam at lectus tristique eu ultrices augue venenatis. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Aliquam erat volutpat. Vivamus sodales tortor eget quam adipiscing in vulputate ante ullamcorper. Sed eros ante, lacinia et sollicitudin et, aliquam sit amet augue. In hac habitasse platea dictumst.
+
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio. Praesent libero. Sed cursus ante dapibus diam. Sed nisi. Nulla quis sem at nibh elementum imperdiet. Duis sagittis ipsum. Praesent mauris. Fusce nec tellus sed augue semper porta. Mauris massa. Vestibulum lacinia arcu eget nulla. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Curabitur sodales ligula in libero. Sed dignissim lacinia nunc. Curabitur tortor. Pellentesque nibh. Aenean quam. In scelerisque sem at dolor. Maecenas mattis. Sed convallis tristique sem. Proin ut ligula vel nunc egestas porttitor. Morbi lectus risus, iaculis vel, suscipit quis, luctus non, massa. Fusce ac turpis quis ligula lacinia aliquet. Mauris ipsum. Nulla metus metus, ullamcorper vel, tincidunt sed, euismod in, nibh. Quisque volutpat condimentum velit. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Nam nec ante. Sed lacinia, urna non tincidunt mattis, tortor neque adipiscing diam, a cursus ipsum ante quis turpis. Nulla facilisi. Ut fringilla. Suspendisse potenti. Nunc feugiat mi a tellus consequat imperdiet. Vestibulum sapien. Proin quam. Etiam ultrices. Suspendisse in justo eu magna luctus suscipit. Sed lectus. Integer euismod lacus luctus magna. Quisque cursus, metus vitae pharetra auctor, sem massa mattis sem, at interdum magna augue eget diam. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Morbi lacinia molestie dui. Praesent blandit dolor. Sed non quam. In vel mi sit amet augue congue elementum. Morbi in ipsum sit amet pede facilisis laoreet. Donec lacus nunc, viverra nec, blandit vel, egestas et, augue. Vestibulum tincidunt malesuada tellus. Ut ultrices ultrices enim. Curabitur sit amet mauris. Morbi in dui quis est pulvinar ullamcorper. Nulla facilisi. Integer lacinia sollicitudin massa. Cras metus. Sed aliquet risus a tortor. Integer id quam. Morbi mi. Quisque nisl felis, venenatis tristique, dignissim in, ultrice.
+
+\subsection{Internal Flows}
+
+
+
+
+\subsection{External Flows}
+A external flow is considered to be a fluid flow that takes places around or outside of a certain geometry body. Examples of such flow occur around
+an airfoil of a airplane, as illustrated in Figure \ref{fig:ExternalFlowAirfoil}  Fluid Mechanics Dem Page 67 Figure 3.6 modified
+
+
+\begin{figure}[htp]
+\centering
+\includegraphics[scale=0.50]{Figures/ExternaFlowModified.png}
+\caption{External flow on around airfoil}
+\label{fig:ExternalFlowAirfoil}
+\end{figure}
+
+For further reading on internal and external flows please refer to \cite{Hirsch2007}.
+
+\subsection{Unsteady flow}
+
+
+\subsection{Incompressible fluids}
+
+sem. Proin ut ligula vel nunc egestas porttitor. Morbi lectus risus, iaculis vel, suscipit quis, luctus non, massa. Fusce ac turpis quis ligula lacinia aliquet. Mauris ipsum. Nulla metus metus, ullamcorper vel, tincidunt sed, euismod in, nibh. Quisque volutpat condimentum velit. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Nam nec ante. Sed lacinia, urna non tincidunt mattis, tortor neque adipiscing diam, a cursus ipsum ante quis turpis. Nulla facilisi. Ut fringilla. Suspendisse potenti. Nunc feugiat mi a tellus consequat imperdiet. Vestibulum sapien. Proin quam. Etiam ultrices. Suspendisse in justo eu magna luctus suscipit. Sed lectus. Integer euismod lacus luctus magna. Quisque cursus, metus vitae pharetra auctor, sem massa mattis sem, at interdum magna augue eget diam. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Morbi lacinia molestie dui. Praesent blandit dolor. Sed non quam. In vel mi sit amet augue congue elementum. Morbi in ipsum sit amet pede facilisis laoreet. Donec lacus nunc, viverra nec, blandit vel, egestas et, augue. Vestibulum tincidunt malesuada tellus. Ut ultrices ultrices enim. Curabitur sit amet mauris. Morbi in dui quis est pulvinar ullamcorper. Nulla facilisi. Integer lacinia sollicitudin massa. Cras metus. Sed aliquet risus a tortor. Integer id quam. Morbi mi. Quisque nisl felis, venenatis tristique, dignissim in, ultrice.
+
+\subsection{Inviscid flow}
+Ideal flow
+
+
+
+
+\subsection{Laminar flow}
+
+If viscosity can be considered important in the modelling of the fluid flow, 
+A laminar flow is one in which no or relatively neglible amounts of fluid particles mix together in the course of the flow direction. A illustration
+of this circumstance can be viewed in Figure \ref{fig:LaminarFlowPlain}. The coloured streams represent the flow of one fluid along a short pipe. The motion
+of the coloured streams remains smooth and uniform without random mixing of colours. The fluid travels smoothly along regular paths and the different coloured
+fluid layers slide over each other without interception.
+
+
+\begin{figure}[htp]
+\centering
+\includegraphics[scale=0.05]{/home/nabladev/Dropbox/____SEMINAR_CFD/text/Figures/laminarflow_plain.jpeg}
+\caption{Laminar flow}
+\label{fig:LaminarFlowPlain}
+\end{figure}
+
+\begin{figure}[htp]
+\centering
+\includegraphics[scale=0.05]{/home/nabladev/Dropbox/____SEMINAR_CFD/text/Figures/laminarflow_vectors.png}
+\caption{Velocity field of the laminar flow}
+\label{LaminarFlowVector}
+\end{figure}
+
+
+
+\subsection{Turbulent flow}
+
+Turbulent flow can be considered the opposite of laminar flow. Heavy mixing of fluid particles takes place in a turbulent flow. Important to note is that turbulence is a property of the the fluid flow not of the fluid itself. The motion of the flow itself and
+each individual particle can be very noisy and random. In Figure \ref{fig:TurbulentFlowPlain} after a short period of uniform laminar flow the colour streams break up
+and become turbulent. There is heavy mixing of colour noticeable and the fluid's path become chaotic. This is due to the viscosity of the fluid itself and also the lenght itself of geometry the fluid
+flows along. In general any kind of random variations in a flow's quantities is considered to be turbulent. In Figure \ref{fig:TurbulentFlowVector} this is the velocity: The random fluctuation of the velocity can be seen at a certain moment. the All this factors are represented with the Reynolds number \textbf{Re} which makes it possible to determine if a flow is likely to be laminar or
+turbulent.
+
+Difference between FLUIDS and FLOW!
+
+\begin{figure}[htp]
+\centering
+\includegraphics[scale=0.05]{/home/nabladev/Dropbox/____SEMINAR_CFD/text/Figures/turbulentflow_plain.jpeg}
+\caption{Turbulent flow}
+\label{fig:TurbulentFlowPlain}
+\end{figure}
+
+
+
+\begin{figure}[htp]
+\centering
+\includegraphics[scale=0.05]{/home/nabladev/Dropbox/____SEMINAR_CFD/text/Figures/turbulentflow_vectors.png}
+\caption{Velocity field of the turbulent flow}
+\label{fig:TurbulentFlowVector}
+\end{figure}
+
+\subsection{Reynolds number}
+
+The dimensionless Reynolds number is used to relate inertial forces to viscous forces in a fluid flow. It can be determined as follows and its value helps to estimate if a flow is more likely to be laminar or turbulent. 
+
+
+\[
+Re = 
+\frac {VL}{\nu} 
+\]
+
+
+With V denoting the average velocity of the fluid inside or outside the geometry, L
+as the characteristic linear dimension or length of the fluid flow (e.g. travelled distance of a fluid) and \(\nu\) as the kinematic viscosity of the fluid.
+
+The linear dimension L varies greatly between different geometry types and is subject to engineering convention. For instance not the lenght but the diameter of a pipe is used when computing Reynolds numbers for the internal flow in respective geometry today. Therfore when comparing Reynolds number as follows one always needs to consider the geometry for which it was computed and can not easily compare Reynolds numbers of different geometry classes.
+
+Laminar flow occurs in general when the viscous forces are dominant, hence the Reynolds number needs to be low. Turbulent flows occur when the inertial forces are dominant. As rule of thumb if the Reynolds number is relatively large the flow is likely to be turbulent (Re > 4000), accordingly small numbers are likely to imply a laminar flow (Re < 2100).
+The term "relative" means that the seperation betweeen large and small Reynolds numbers is dependend on the \emph{critical} Reynolds number. This critical Reynolds number determines the thresholds and is geometry dependend.
+In 
+\begin {table}[htp]
+\begin{tabular}{lll}
+	11 & 12 & 13\\
+	21 & 22 & 23\\
+	31 & 32 & 33\\
+\end{tabular}
+\caption{Table of critical Reynolds numbers}
+\end {table}
+
+
+\section{Euler equations}
+
+Sed ullamcorper quam eu nisl interdum at interdum enim egestas. Aliquam placerat justo sed lectus lobortis ut porta nisl porttitor. Vestibulum mi dolor, lacinia 
+
+
+\[
+\rho \frac{dv}{dt} = 
+\rho ((\nabla \cdot v)\cdot v + \frac {\delta v}{\delta t }) =
+f - \nabla p 
+\]
+
+
+
+\subsection{Continuum laws}
+
+\subsection{HFfefaeg laws}
+
+\section {Similitude}
+Fluid Mechanics Demis Page 116
+
+
+
+\section{Navier-Stokes equations}
+
+The Navier-Stokes equations (NSE) are a set of equations to describe incompressible
+viscous fluid flows. Therefore they can be seen as a extension and a more accurate version of the Euler equations that now include viscosity and heat conduction. Formulated by the French physicist Claude-Louis Navier with contributions from the Irish physicist George Stokes in the 19th century these set of equations are the cornerstones of today's understanding of fluid dynamics. 
+
+Assumptiuons / Preconditions
+
+
+\section{Discretization}
+
+This chapter continues the numerical discussion of the CFD equations by focusing
+on the discretization phase. The *continues* Navier-Stokes equations need to 
+discretized in order to solve them. Since this report focuses on unsteady fluids, all given equations are time-dependend. Beginning with the simples discretization method
+the chapter continues with more advanced methods that need to be understood in order
+to focus on the advancements Mesh-less methods have that are the subject of the next Chapter.
+
+\subsection{Discretization in time}
+also explicit and implicit ...
+
+\subsection{Discretization in space}
+
+Unterschied meshbased , meshfree
+
+Next chapter ... allg bissle was er
+
+
+%Figure Venn of Meshbased and Meshfree
+
+
+
+
+
+
+
+\begin{figure}[htp]
+\centering
+
+\def\firstcircle{(0,0) circle (4.0cm)}
+\def\secondcircle{(0:5cm) circle (3.0cm)}
+% Code from Christian Feuersänger
+% http://tex.stackexchange.com/questions/54794/using-a-pgfplots-style-legend-in-a-plain-old-tikzpicture#54834
+
+% argument #1: any options
+\newenvironment{customlegend}[1][]{%
+    \begingroup
+    % inits/clears the lists (which might be populated from previous
+    % axes):
+    \csname pgfplots@init@cleared@structures\endcsname
+    \pgfplotsset{#1}%
+}{%
+    % draws the legend:
+    \csname pgfplots@createlegend\endcsname
+    \endgroup
+}%
+
+% makes \addlegendimage available (typically only available within an
+% axis environment):
+\def\addlegendimage{\csname pgfplots@addlegendimage\endcsname}
+
+%%--------------------------------
+
+% definition to insert numbers
+\pgfkeys{/pgfplots/number in legend/.style={%
+        /pgfplots/legend image code/.code={%
+            \node at (0.295,-0.0225){#1};
+        },%
+    },
+}
+
+% Now we can draw the sets:
+\begin{tikzpicture}
+    
+    \draw \firstcircle node[below] {$Eulerian$};
+    \draw \secondcircle node [above] {$Lagrangian$};
+
+    % Now we want to highlight the intersection of the first and the
+    % second circle:
+
+\begin{scope}
+\fill[red] \firstcircle;
+\fill[cyan] \secondcircle;
+\draw \firstcircle node {$Eulerian$};
+\draw \secondcircle node [right] {$Lagrangian$};
+\end{scope}
+
+    \begin{scope}
+      \clip \firstcircle;
+      \fill[green]  \secondcircle;
+
+
+
+    \end{scope}
+
+    \node[align=left, below] at (1.5,-5.5)%
+{This happens\\in period 1\\and is aligned\\ left};
+
+\draw (0,0)--(10,0);
+\draw(0,-0.2)--(0,0.2)node[above,red]{\small{0}};
+\draw(10,-0.2)--(10,0.2)node[above,blue]{\small{1}};
+%------------------%
+\foreach \m[count=\mi] in {0.909090909,...,9.090909090}
+\draw(\m,-0.1)--(\m,0.1) node[anchor=north](a\mi){};
+\draw[dotted]($(a2)+(0,0.1)$)--($(a2)+(0,0.4)$);
+\draw[dotted]($(a3)+(0,0.1)$)--($(a3)+(0,0.4)$);
+\draw[stealth-stealth,red,opacity=0.4]($(a3)+(0,0.4)$)--($(a2)+(0,0.4)$)node[anchor=south west,xshift=0.23cm,black,opacity=1]{\small{$R$}};
+%------------------%
+\foreach \x/\xtext in {0.7/$u_1$,1.2/$u_2$,4.5/$u_3$,5.2/$u_4$,5.6/$u_5$,7.5/$u_6$}
+\shade[ball color=blue]  (\x,0 ) circle (0.1cm) node[below=0.1cm]{\small{\xtext}};
+%------------------%
+% inf user
+\shade[ball color=green]  (0,0 ) circle (0.1cm) node[below=0.1cm]{\small{$u_{inf}$}};
+
+\begin{customlegend}[
+legend entries={ % <= in the following there are the entries
+$R$: infection radius,
+$u_i$: users,
+$u_{inf}$: initial infected user, 
+social space max dimension,
+social space min dimension,
+example of rectangle
+},
+legend style={at={(4.5,3.5)},font=\footnotesize}] % <= to define position and font legend
+% the following are the "images" and numbers in the legend
+    \addlegendimage{stealth-stealth,red,opacity=0.4}
+    \addlegendimage{mark=ball,draw=white}
+    \addlegendimage{mark=ball,ball color=green,draw=white}
+    \addlegendimage{number in legend=1,blue}
+    \addlegendimage{number in legend=0,red}
+    \addlegendimage{area legend,orange,fill=orange!20}
+\end{customlegend}
+
+
+
+
+\end{tikzpicture}
+
+\caption{Perspective vs. Discretization Methods}
+\label{fig:PerspVsDisMeth}
+
+\end{figure}
+
+
+
+
