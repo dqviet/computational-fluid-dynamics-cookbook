@@ -187,7 +187,7 @@
 %-------------------------------------------------   
 \degree{Seminar report} % Your degree name - this is currently used in the title page and abstract
 %-------------------------------------------------   
-\authors{Jathavan \textsc{Sriram}} % Your name - this is used in the title page and abstract
+\authors{Julian \textsc{Huettner}} % Your name - this is used in the title page and abstract
 %-------------------------------------------------   
 \addresses{Jathavan Sriram \\ rnd@nablavfx.com \\ http://jathapp.blogspot.de/} % Your address - this is not currently used anywhere in the template, cite it with \addressnames if you want it
 %-------------------------------------------------   
