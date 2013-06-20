@@ -1,0 +1,127 @@
+% Chapter Template
+
+\chapter{Smoothed Particle Hydrodynamics} % Main chapter title
+
+\label{Chapter 5} % Change X to a consecutive number; for referencing this chapter elsewhere, use \ref{ChapterX}
+
+\lhead{Chapter 5. \emph{Smoothed Particle Hydrodynamics}} % Change X to a consecutive number; this is for the header on each page - perhaps a shortened title
+
+%----------------------------------------------------------------------------------------
+%	SECTION 1
+%----------------------------------------------------------------------------------------
+
+\section{Mesh-free methods}
+In this chapter the meshfree methods are introduced and explained on the example of the Smoothed Particle
+Hydrodynamics method. For further reading \citep{Liu2003} is recommended.
+
+\subsection{Why use mesh free methods?}
+
+As described in Chapter 3 the scientific and engineering community have used mesh-based methods for
+very long as they have cleary matured over the years. Still
+Capability to work from
+micro to macro scale applications.
+
+The benefits of mesh-free methods versus classical mesh-based methods can be outlined as:
+\begin{itemize}
+\item Mesh-free methods can easily handle strong deformations that would lead to
+remeshing in a FEM simulation. This is due to the absence of a topological mesh which in course
+of a deformation simulation would lead to problems in connectivity. ShafonLi 15
+\item The mesh-free discretization with particals can provide a better representation of a varying
+geometric shape.
+\end{itemize}
+
+In this report we will focus on the Smoothed Particle Hydrodynamics method as one of the earliest
+and vastly used mesh-free methods.
+
+\subsection{History of SPH}
+
+The idea of SPH was at first formulated in the year 1977.Its origins do not lie in CFD but in the attempt to model and solve astrophysical problems in a new way. Initially Gingold and Monoghan \citep{Gingold1977} invented and named this approach at the Institute of Astronomy in Cambridge. Their primary intention was to find a approach that would be less computational intensive than FDM to solve various evolution processes (e.g. a star forming from interstellar matter). In their article they state how limited the use of FDM
+is for their often asymmetrical/distorted problems, since in order to be be computed accurately they needed a excessive amount of grid points (resp. high spatial discretization). They proposed a new way of discretization that was based on a Lagrangian description and used a fixed amount of randomly distributed particles. To model physical scalar and vector fields and to retrieve those values during computation they used statistical methods (Monte Carlo integral determination) along with a \emph{kernel function}. Their approach will be described in more detail in the following sections.  
+Inspired by the colleagues at Cambridge, Lucy \citep{Lucy1977} used this numerical approach to test succesfully the feasability of the fission hypothesis for protostars, which is a gas dynamical problem of rotating fluids in space. In contrast to CFD, these problems like the formation of galaxies or solar systems are of macroscopic scale.
+Today SPH and its further developments are widely adapted in astronomy, CFD and even VFX. 
+
+
+\subsection{Applications of SPH}
+Because of several numerical advantages of SPH it is today not only used in astrophysics but also in a wide
+range of simulations for fluid dynamics like underwater explosions (e.g. Liu et al. ) and even fluid creation
+for visual effects in feature film (see Chapter 4...) One of this visual effects applications will be explained
+in more detail with the SPH software "Realflow" and NAIAD. For further reading on the applications of CFD in computer graphics please refer to \citep{Bridson2008} and for new Hybrid Methods that have the advantages of Meshbased and Meshfree methods \citep[pg. 195]{Jackl2006} provides a simple introduction. 
+
+
+\begin{figure}[htp]
+\centering
+\begin{tabular}{cccc}
+	\includegraphics[width=0.2\textwidth]{Figures/sph_bates_starcluster_00.jpg} 
+ &  \includegraphics[width=0.2\textwidth]{Figures/sph_bates_starcluster_01.jpg} 
+ &  \includegraphics[width=0.2\textwidth]{Figures/sph_bates_starcluster_02.jpg}
+ &  \includegraphics[width=0.2\textwidth]{Figures/sph_bates_starcluster_03.jpg}  
+ \\
+	\includegraphics[width=0.2\textwidth]{Figures/sph_bates_starcluster_04.jpg} 
+ &  \includegraphics[width=0.2\textwidth]{Figures/sph_bates_starcluster_05.jpg} 
+ &  \includegraphics[width=0.2\textwidth]{Figures/sph_bates_starcluster_06.jpg}
+ &  \includegraphics[width=0.2\textwidth]{Figures/sph_bates_starcluster_07.jpg} 
+ \\
+	\includegraphics[width=0.2\textwidth]{Figures/sph_bates_starcluster_08.jpg} 
+&   \includegraphics[width=0.2\textwidth]{Figures/sph_bates_starcluster_09.jpg}  
+&   \includegraphics[width=0.2\textwidth]{Figures/sph_bates_starcluster_10.jpg}
+&   \includegraphics[width=0.2\textwidth]{Figures/sph_bates_starcluster_11.jpg} 
+\\
+	\includegraphics[width=0.2\textwidth]{Figures/sph_bates_starcluster_12.jpg} 
+&   \includegraphics[width=0.2\textwidth]{Figures/sph_bates_starcluster_13.jpg}  
+&   \includegraphics[width=0.2\textwidth]{Figures/sph_bates_starcluster_14.jpg}
+&   \includegraphics[width=0.2\textwidth]{Figures/sph_bates_starcluster_15.jpg}
+\\
+
+\end{tabular}
+\caption{Image sequence of the Formation of Stars and Brown Dwarfs in a Star Cluster}
+\label{fig:SPHStarCluster}
+\end{figure}
+
+\subsection{Basic idea of SPH}
+SPH is a so called meshfree particle method (MPM) and replaces the meshbased discretization with a initial distribution of particles over the problem domain. 
+
+\section{Mathematical foundation}
+
+\subsection{Kernel approximation}
+in continuous form
+
+\subsection{Particle approximation}
+in discretized form
+
+\subsection{Lagrangian Navier-Stokes equations}
+Because SPH is a pure Lagrangian method, also the NSE need to be formulated in the Lagrangian form. In the previous Chapters mostly the Eulerian forms were used. 
+
+\subsection{SPH vs. FEM}
+While both methods in most implementatins share a Lagrangian perspective the main difference between the
+FEM and particle based methods is indeed the absence of a overall grid in the SPH methods. While FEM is based
+on infin? elements, they still exist withing a grid.
+
+For further reading please refer to \citep{Li2004} and \citep{Liu2003}.
+
+\subsection{Benefits of Meshfree methods over Meshbased methods}
+The most problems of the Meshbased methods result not from the numerical capabilities of their methods, but from the simple presence of a mesh itself. 
+
+- Better to model physical behaviour that has strong distortion
+- Mesh dependend problems like remeshing are avoided
+- No time-consuming (re-)generation of meshes for a problem 
+
+%-----------------------------------
+%	SUBSECTION 2
+%-----------------------------------
+\section{Implementation}
+
+\subsection{Nearest neighbour particles}
+
+\subsection{Issues of computer implementation}
+RAM...
+
+\subsection{Parcallel Coding}
+
+
+Fitc
+
+
+\section{Implementation of Navier-Stokes equations}
+
+
+\section{Particle consistency problem}
